@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  resources :microposts
+
+  # creates mapping of User urls to controller actions for the User resource
+  resources :users #created after scaffolding User model/controller
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'application#toyApp'
+  root 'users#index' #https://limitless-sea-3058.herokuapp.com/
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
